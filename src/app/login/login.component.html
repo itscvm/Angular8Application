@@ -1,0 +1,19 @@
+<div class="container-fluid centered" style="text-align: center;">
+    <div class="row">
+        <div class="col-sm-4">
+            <p-panel style="text-align: center;">
+                <ng-template pTemplate="header">
+                    Login
+                </ng-template>
+                <div>
+                    Username:&nbsp;<input type="text" pInputText class="p-inputtext-md"  placeholder="Username" [(ngModel)]="username">
+                </div><br><br> 
+                Password:&nbsp;<p-password [(ngModel)]="password"></p-password><br><br>
+                <div style="padding-left:10%;">
+                    <button pButton pRipple type="button" label="Login" class="p-button-success" (click)="handleLogin()"></button>
+                </div>
+            </p-panel>        
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

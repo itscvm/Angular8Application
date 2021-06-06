@@ -1,0 +1,27 @@
+<div>
+    <p-menubar>
+        <ng-template pTemplate="start">
+            <img src="/assets/img/cl.png" height="40" class="p-mr-2">&nbsp;&nbsp;&nbsp;
+        </ng-template>
+
+        <ng-template pTemplate="end">
+            <i class="pi pi-user">{{username}}</i>
+        </ng-template>
+    </p-menubar>
+    <div class="row">
+        <div class="col-sm-2">
+        <p-slideMenu [model]="items" [viewportHeight]="height" [menuWidth]="width">
+        </p-slideMenu>
+        </div>
+        <div class="col-sm-10" style="align-content: center;" *ngIf="instruction">
+           <app-introduction></app-introduction>
+        </div>
+        <div class="col-sm-10" style="align-content: center;" *ngIf="clusterTables">
+            <app-clustertab></app-clustertab>
+         </div>
+         <div class="col-sm-10" style="align-content: center;" *ngIf="admin">
+            <app-introduction></app-introduction>
+         </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

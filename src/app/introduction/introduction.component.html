@@ -1,0 +1,15 @@
+<div>
+    <p-panel>
+        <ng-template pTemplate="header">
+            Instructions
+        </ng-template>
+        <div>
+            Username:&nbsp;<input type="text" pInputText class="p-inputtext-md" placeholder="Username"
+                [(ngModel)]="username">
+        </div><br><br>
+        Password:&nbsp;<input type="password" pPassword><br><br>
+        <div style="padding-left:10%;">
+            <button pButton pRipple type="button" label="Login" class="p-button-success"></button>
+        </div>
+    </p-panel>
+</div>
